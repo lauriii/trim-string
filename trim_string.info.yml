@@ -1,0 +1,6 @@
+name: 'Trim String Twig Extension'
+type: module
+description: 'Creates Twig Filter which allows themers to set maxmimum length for a string.'
+package: Testing
+version: VERSION
+core: 8.x
