@@ -60,8 +60,6 @@ class TrimString extends TwigExtension {
    *
    * @return string
    *   The filtered string.
-   *
-   * @see \Drupal\system\Tests\Theme\TwigExtensionTest::testTwigExtensionFilter()
    */
   public static function trimString($string, $length = 10) {
     return substr($string, 0, $length);
