@@ -7,12 +7,10 @@
 
 namespace Drupal\trim_string\TwigExtension;
 
-use Drupal\Core\Template\TwigExtension;
-
 /**
  * A test Twig extension that adds a custom function and a custom filter.
  */
-class TrimString extends TwigExtension {
+class TrimString extends \Twig_Extension {
 
   /**
    * Generates a list of all Twig filters that this extension defines.
@@ -27,16 +25,16 @@ class TrimString extends TwigExtension {
    *   The value is a standard PHP callback that defines what the filter does.
    */
   public function getFilters() {
-    return array(
+    return [
       new \Twig_SimpleFilter('trim_string', array('Drupal\trim_string\TwigExtension\TrimString', 'trimString')),
-    );
+    ];
   }
 
   /**
    * Empty getFunction method because without it everything seems to be broken.
    */
   public function getFunctions() {
-    return array();
+    return [];
   }
 
   /**
